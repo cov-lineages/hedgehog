@@ -19,4 +19,4 @@ hedgehog -v
 ```
 and you should see the versions of <strong>hedgehog</strong>.
 
-### [Next: Updating pangolin](./updating.md)
+### [Next: Updating](./updating.md)
