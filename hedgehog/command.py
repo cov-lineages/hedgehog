@@ -49,6 +49,7 @@ def main(sysargs = sys.argv[1:]):
 
     parser.add_argument("-t","--threads",action="store",default=1,type=int, help="Number of threads")
     parser.add_argument("-v","--version", action='version', version=f"hedgehog {__version__}")
+    parser.add_argument("-pv","--pango-version", action='version', version=f"pango {PANGO_VERSION}")
 
     if len(sysargs)<1:
         parser.print_help()
