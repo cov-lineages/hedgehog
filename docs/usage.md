@@ -38,6 +38,7 @@ optional arguments:
   -t THREADS, --threads THREADS
                         Number of threads
   -v, --version         show program's version number and exit
+  -pv, --pango-version  show pango designation version number and exit
   ```
 
 ### [Next: Output](./output.md)
