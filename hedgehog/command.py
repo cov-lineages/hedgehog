@@ -43,7 +43,7 @@ def main(sysargs = sys.argv[1:]):
     parser.add_argument("--no-temp",action="store_true",help="Output all intermediate files, for dev purposes.")
     parser.add_argument('--max-ambig', action="store", default=0.1, type=float,help="Maximum proportion of Ns allowed for hedgehog to attempt assignment. Default: 0.1",dest="maxambig")
     parser.add_argument('--min-length', action="store", default=3790, type=int,help="Minimum query length allowed for hedgehog to attempt assignment. Default: 3800",dest="minlen")
-    parser.add_argument('--seq-chunk-size', action="store", default=500, type=int,help="Minimum query length allowed for hedgehog to attempt assignment. Default: 500",dest="seq_chunk_size")
+    parser.add_argument('--seq-chunk-size', action="store", default=100, type=int,help="Minimum query length allowed for hedgehog to attempt assignment. Default: 500",dest="seq_chunk_size")
     
     parser.add_argument("--verbose",action="store_true",help="Print lots of stuff to screen")
 
