@@ -48,7 +48,7 @@ def main(sysargs = sys.argv[1:]):
     parser.add_argument("--verbose",action="store_true",help="Print lots of stuff to screen")
 
     parser.add_argument("-t","--threads",action="store",default=1,type=int, help="Number of threads")
-    parser.add_argument("-v","--version", action='version', version=f"pangolin {__version__}")
+    parser.add_argument("-v","--version", action='version', version=f"hedgehog {__version__}")
 
     if len(sysargs)<1:
         parser.print_help()
