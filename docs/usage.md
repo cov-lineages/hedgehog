@@ -23,7 +23,7 @@ usage: hedgehog <query> [options]
 hedgehog: SARS-CoV-2 Spike-sequence based lineage set assignment
 
 positional arguments:
-  query                 Query fasta file of spike sequences to analyse.
+  query                 Query (multi-)fasta file of spike sequences to analyse.
 
 optional arguments:
   -h, --help            show this help message and exit
