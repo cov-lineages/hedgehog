@@ -3,6 +3,7 @@
 
 Spikey SARS-CoV-2 sequence based lineage set assignment
 
+<img src="https://github.com/aineniamh/hedgehog/blob/main/docs/hedgehog_logo.png" width="300">
 
 ## Documentation
 
