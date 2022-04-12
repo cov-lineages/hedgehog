@@ -1,3 +1,3 @@
 _program = "hedgehog"
-__version__ = "1.0.09"
-PANGO_VERSION="v1.2.133"
+__version__ = "1.0.10"
+PANGO_VERSION="v1.3"
