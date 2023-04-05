@@ -34,16 +34,16 @@ def check_install(config):
         "filename":"reference.gb"},
         {"key":"header_file",
         "directory":"data",
-        "filename":"decisionTreeHeaders_v1.joblib"},
+        "filename":"randomForestHeaders_v2.joblib"},
         {"key":"trained_model",
         "directory":"data",
-        "filename":"decisionTree_v1.joblib"},
+        "filename":"randomForest_v2.joblib"},
         {"key":"designated_hash",
         "directory":"data",
         "filename":"sets.hash.csv"},
         {"key":"set_info",
         "directory":"data",
-        "filename":"set_names.95.csv"}
+        "filename":"set_names.60.csv"}
         
     ]
     for resource in resources:

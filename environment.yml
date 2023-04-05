@@ -8,11 +8,8 @@ dependencies:
   - pip=19.3.1
   - python>=3.7
   - gofasta
-  - usher
+  # - usher
   - mafft>=7.475
   - snakemake-minimal
   - pip:
-    - pandas==1.0.1
     - git+https://github.com/cov-lineages/pangolin.git
-    - git+https://github.com/cov-lineages/scorpio.git
-    - git+https://github.com/cov-lineages/constellations.git
