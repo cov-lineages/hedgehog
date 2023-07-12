@@ -17,7 +17,7 @@ setup(name='hedgehog',
             "wheel>=0.34",
             'joblib>=0.11',
             'pysam>=0.16.0',
-            'scikit-learn>=0.23.1',
+            'scikit-learn==0.2.1',
             "PuLP>=2"
         ],
       description='',
