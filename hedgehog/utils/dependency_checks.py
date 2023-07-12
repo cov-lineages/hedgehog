@@ -42,14 +42,14 @@ def check_dependencies():
 
     if missing:
         if len(missing)==1:
-            sys.stderr.write(colour.cyan(f'Error: Missing dependency `{missing[0]}`.')+'\nPlease update your civet environment.\n')
+            sys.stderr.write(colour.cyan(f'Error: Missing dependency `{missing[0]}`.')+'\nPlease update your hedgehog dependencies.\n')
             sys.exit(-1)
         else:
             dependencies = ""
             for i in missing:
                 dependencies+=f"\t- {i}\n"
 
-            sys.stderr.write(colour.cyan(f'Error: Missing dependencies.')+f'\n{dependencies}Please update your civet environment.\n')
+            sys.stderr.write(colour.cyan(f'Error: Missing dependencies.')+f'\n{dependencies}Please update your hedgehog dependencies.\n')
             sys.exit(-1)
     else:
         print(colour.green("All dependencies satisfied."))
