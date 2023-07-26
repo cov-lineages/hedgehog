@@ -6,10 +6,10 @@ channels:
 dependencies:
   - minimap2>=2.16
   - pip=19.3.1
-  - python>=3.7
   - gofasta
   # - usher
   - mafft>=7.475
-  - snakemake-minimal
+  - python>=3.9
+  - snakemake-minimal=7.30.2
   - pip:
     - git+https://github.com/cov-lineages/pangolin.git
