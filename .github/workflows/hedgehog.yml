@@ -18,8 +18,8 @@ jobs:
           environment-file: environment.yml
           activate-environment: hedgehog
           channels: conda-forge,bioconda,defaults
-          conda-version: "4.12.0"
-          miniforge-variant: Mambaforge
+          conda-version: "23.5.0"
+          mamba-version: "*"
       - name: Install hedgehog
         run: pip install -e .
       - name: Check hedgehog version
