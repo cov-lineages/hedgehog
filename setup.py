@@ -17,8 +17,8 @@ setup(name='hedgehog',
             "wheel>=0.34",
             'joblib>=0.11',
             'pysam>=0.16.0',
-            'scikit-learn==1.2.2',
-            "PuLP==2.7.0"
+            'scikit-learn>=0.23.1',
+            "PuLP>=2"
         ],
       description='',
       url='https://github.com/aineniamh/hedgehog',
