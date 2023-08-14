@@ -9,7 +9,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: ["ubuntu-latest"]
+        os: ["macos-latest"]
     steps:
       - uses: actions/checkout@v2
       - uses: conda-incubator/setup-miniconda@v2
@@ -18,8 +18,8 @@ jobs:
           activate-environment: hedgehog
           channels: conda-forge,bioconda,defaults
           python-version: "3.10"
-          conda-version: "23.5.0"
-          mamba-version: "*"
+          conda-version: "23.3"
+          mamba-version: "1.1"
       - name: Install hedgehog
         run: pip install -e .
       - name: Check hedgehog version
