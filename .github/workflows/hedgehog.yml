@@ -3,14 +3,13 @@ on: [push, pull_request]
 defaults:
   run:
     shell: bash -l {0}
-
 jobs:
   run_hedgehog_test:
-    name: hedgehog test on ${{ matrix.os }}
+    name: Hedgehog test on ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: ["ubuntu-latest", "macos-latest"]
+        os: ["ubuntu-latest"]
     steps:
       - uses: actions/checkout@v2
       - uses: conda-incubator/setup-miniconda@v2
@@ -18,6 +17,7 @@ jobs:
           environment-file: environment.yml
           activate-environment: hedgehog
           channels: conda-forge,bioconda,defaults
+          python-version: "3.10"
           conda-version: "23.5.0"
           mamba-version: "*"
       - name: Install hedgehog

@@ -1,4 +1,4 @@
-name: hedgehog
+name: hedgehog2
 channels:
   - conda-forge
   - bioconda
@@ -6,8 +6,8 @@ channels:
 dependencies:
   - minimap2>=2.16
   - pip
-  - gofasta
-  - mafft>=7.475
+  - python>=3.7
+  - mafft
   - snakemake-minimal=7.24.0
   - pip:
     - git+https://github.com/cov-lineages/pangolin.git
