@@ -5,10 +5,8 @@ channels:
   - defaults
 dependencies:
   - minimap2>=2.16
-  - biopython >=1.74
-  - pip=19.3.1
+  - pip
   - python>=3.7
-  - gofasta
   - mafft
   - snakemake-minimal=7.24.0
   - pip:

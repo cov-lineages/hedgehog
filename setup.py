@@ -12,14 +12,12 @@ setup(name='hedgehog',
                 'hedgehog/scripts/hedge_lineage_set.smk'],
       package_data={"hedgehog":["data/*"]},
       install_requires=[
-            "biopython>=1.70",
+            "biopython>=1.74",
             'pandas>=1.0.1',
             "wheel>=0.34",
             'joblib>=0.11',
-            'pysam>=0.16.0',
-            'scikit-learn>=0.23.1',
-            "PuLP>=2"
-        ],
+            'scikit-learn>=0.23.1'        
+            ],
       description='',
       url='https://github.com/aineniamh/hedgehog',
       author='Aine OToole',
