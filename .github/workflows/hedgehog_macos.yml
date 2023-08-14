@@ -3,8 +3,6 @@ on: [push, pull_request]
 defaults:
   run:
     shell: bash -l {0}
-
-jobs:
 jobs:
   run_hedgehog_test:
     name: Hedgehog test on ${{ matrix.os }}
