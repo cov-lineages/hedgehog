@@ -1,4 +1,4 @@
-name: hedgehog2
+name: hedgehog
 channels:
   - conda-forge
   - bioconda
