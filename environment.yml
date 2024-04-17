@@ -4,7 +4,7 @@ channels:
   - bioconda
   - defaults
 dependencies:
-  - minimap2>=2.16
+  - minimap2>=2.17
   - pip
   - python=3.10
   - mafft
