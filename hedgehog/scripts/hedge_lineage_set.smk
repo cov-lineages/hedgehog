@@ -70,14 +70,15 @@ rule hash_sequence_assign:
         
         with open(output.designated,"w") as fw:
             writer = csv.DictWriter(fw,delimiter=",",lineterminator="\n",fieldnames=["taxon","set_hash"])
+            fw.write("taxon,set_hash\n")
             with open(output.for_pangolearn, "w") as fseq:
                 
                 for record in SeqIO.parse(input.fasta, "fasta"):
                     if record.id!="reference":
                         hash_string = assignment_hash.get_hash_string(record)
                         if hash_string in set_hash:
-                            row = {"taxon":record.id,"set_hash":set_hash[hash_string]}
-                            writer.writerow(row)
+
+                            fw.write(f"{record.id},{set_hash[hash_string]}\n")
                         else:
                             fseq.write(f">{record.description}\n{record.seq}\n")
 
@@ -117,11 +118,9 @@ rule add_failed_seqs:
             reader = csv.DictReader(f)
             note = "Assigned from designation hash."
             for row in reader:
-                try:
-                    this_set_info = set_info[row["set_hash"]]
-                    fw.write(f"{row['taxon']},{row["set_hash"][:6]},{row["set_hash"]},{this_set_info['precision']},{this_set_info['set_description']},{this_set_info['lineage_count']},{this_set_info['spike_constellation']},NA,NA,,{config['hedgehog_version']},{config['pango_version']},passed_qc,{note}\n")
-                except:
-                    print(row)
+                this_set_info = set_info[row["set_hash"]]
+                fw.write(f"{row['taxon']},{row["set_hash"][:6]},{row["set_hash"]},{this_set_info['precision']},{this_set_info['set_description']},{this_set_info['lineage_count']},{this_set_info['spike_constellation']},NA,NA,,{config['hedgehog_version']},{config['pango_version']},passed_qc,{note}\n")
+
 
         with open(input.qcpass, "r") as f:
             reader = csv.DictReader(f)
