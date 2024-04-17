@@ -115,9 +115,8 @@ rule add_failed_seqs:
             reader = csv.DictReader(f)
             note = "Assigned from designation hash."
             for row in reader:
-                set_hash = row["set_hash"].rstrip().lstrip()
-                this_set_info = set_info[set_hash]
-                fw.write(f"{row['taxon']},{set_hash[:6]},{set_hash},{this_set_info['precision']},{this_set_info['set_description']},{this_set_info['lineage_count']},{this_set_info['spike_constellation']},NA,NA,,{config['hedgehog_version']},{config['pango_version']},passed_qc,{note}\n")
+                this_set_info = set_info[row["set_hash"]]
+                fw.write(f"{row['taxon']},{row["set_hash"][:6]},{row["set_hash"]},{this_set_info['precision']},{this_set_info['set_description']},{this_set_info['lineage_count']},{this_set_info['spike_constellation']},NA,NA,,{config['hedgehog_version']},{config['pango_version']},passed_qc,{note}\n")
                 
         with open(input.qcpass, "r") as f:
             reader = csv.DictReader(f)
