@@ -1,5 +1,6 @@
-# hedgehog
+> Note this project is no longer maintained with updated data 
 
+# hedgehog
 
 Spikey SARS-CoV-2 sequence based lineage set assignment
 
